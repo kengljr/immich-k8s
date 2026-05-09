@@ -1,4 +1,4 @@
-name: Unit Tests
+name: Configuration Build
 on:
   pull_request:
     branches:
@@ -27,3 +27,11 @@ jobs:
 
       - name: Validate compose
         run: docker compose config
+
+      - name: install nginx
+        run: apt install nginx -y
+
+      - name: Validate nginx config
+        run: |
+          sudo cp nginx/my-app.conf /etc/nginx/conf.d/default.conf
+          sudo nginx -t
