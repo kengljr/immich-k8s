@@ -1,2 +1,6 @@
 #Photo
 library/
+postgres/
+
+docker/library
+docker/postgres
