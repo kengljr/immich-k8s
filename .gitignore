@@ -2,5 +2,5 @@
 library/
 postgres/
 
-docker/library
-docker/postgres
+docker/library/
+docker/postgres/
