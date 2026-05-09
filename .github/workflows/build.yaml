@@ -42,7 +42,7 @@ jobs:
           EOF
       
       - name: Start container
-        run: docker compose up -d -f docker/docker-compose.yaml
+        run: docker compose -f docker/docker-compose.yaml up -d
 
       - name: Wait for service startup
         run: sleep 20
