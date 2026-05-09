@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v6
 
       - name: install nginx
-        run: apt install nginx -y
+        run: sudo apt install nginx -y
 
       - name: Validate nginx config
         run: |
