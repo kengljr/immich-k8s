@@ -1,12 +1,11 @@
 name: Integration test
-
 on:
   pull_request:
     branches:
-      - main
+      - dev
   push:
     branches:
-      - main
+      - dev
 
 jobs:
   test:
@@ -28,7 +27,7 @@ jobs:
           EOF
       
       - name: Start container
-        run: docker compose up -d
+        run: docker compose up -d -f docker/docker-compose.yaml
 
       - name: Wait for service startup
         run: sleep 20
