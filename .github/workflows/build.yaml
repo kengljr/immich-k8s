@@ -19,5 +19,5 @@ jobs:
 
       - name: Validate nginx config
         run: |
-          sudo cp nginx/my-app.conf /etc/nginx/conf.d/default.conf
+          sudo cp docker/nginx/my-app.conf /etc/nginx/conf.d/default.conf
           sudo nginx -t
