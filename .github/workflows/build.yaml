@@ -14,20 +14,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
-      - name: Create test env
-        run: |
-          cat <<EOF > .env
-          IMMICH_VERSION=release
-          UPLOAD_LOCATION=./uploads
-          DB_DATA_LOCATION=./db
-          DB_PASSWORD=test
-          DB_USERNAME=postgres
-          DB_DATABASE_NAME=immich
-          EOF
-
-      - name: Validate compose
-        run: docker compose config
-
       - name: install nginx
         run: apt install nginx -y
 
